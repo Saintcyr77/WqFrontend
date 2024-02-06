@@ -11,25 +11,37 @@ import axios from "axios";
 function App() {
   const [count, setCount] = useState<number>(0);
 
+  const [author, setAuthor] = useState<string>();
   const [quote, setQuote] = useState<string>();
-  // const apiUrl: any = process.env.VITE_APP_API_URL;
+  const [loading, setLoading] = useState<boolean>();
 
   const getQuote = async () => {
     try {
+      setLoading(false);
       const response = await axios.get(`${import.meta.env.VITE_API_URL}`);
-      setQuote(response.data);
+      const res = response.data.message.quote;
+      const data = res.split("-");
+      setQuote(data[0].trim());
+      setAuthor(data[1].trim());
     } catch (err) {
       console.log(err);
     }
+    setLoading(true);
   };
-console.log(quote);
+
+  console.log(`author is ${author}`);
+  console.log(`quote is ${quote}`);
 
   return (
     <>
       <div className="page-container">
         <div className="logo">
           {/* <img src={gun} alt='Click' className='logo-image'></img> */}
-          <p className="typo-style" onClick={getQuote}>Because Hitory Is Written In Blood</p>
+          <p className="typo-style" onClick={getQuote}>
+            Because Hitory Is Written In Blood
+          </p>
+          <p style={{ display: loading ? "block" : "none" }} className="quote">{quote}</p>
+           <p style={{ display: loading ? "block" : "none" }} className="author">{ author}</p>
         </div>
         <MainBack />
       </div>

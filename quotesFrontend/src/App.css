@@ -43,3 +43,28 @@ body{
     }
   
 }
+.quote{
+   
+    animation: fadeIn 5s;
+      color: red;
+      font-family: "Protest Revolution", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+}
+.author{
+animation: fadeIn 10s;
+  font-family: "Protest Revolution", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: red;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
