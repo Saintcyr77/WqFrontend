@@ -51,7 +51,7 @@ const MainBack: React.FC = () => {
         <Carousel.Caption>
           <h3 className='description'>USS Bunker Hill</h3>
           <p className='description'>
-        Only through the unparalleled courage of hundreds of men at the risk of their lives was the Bunker Hill saved from sinking. Yet the carnage was staggering. The kamikaze attack––the single most destructive suicide mission of the war––took 393 American lives and wounded more than 250 others.
+      The kamikaze attack––the single most destructive suicide mission of the war––took 393 American lives and wounded more than 250 others.
           </p>
         </Carousel.Caption>
       </Carousel.Item>
