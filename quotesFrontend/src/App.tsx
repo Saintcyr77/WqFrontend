@@ -14,10 +14,7 @@ function App() {
       <div className='page-container'>
         <div className='logo'>
           {/* <img src={gun} alt='Click' className='logo-image'></img> */}
-          <Typography variant='body1' className='typo-style'>
-            Becuse history is written in blood
-
-          </Typography>
+       <p className='typo-style'>Because Hitory Is Written In Blood</p>
           
        </div>
       <MainBack/>

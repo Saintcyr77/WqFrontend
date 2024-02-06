@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Protest+Revolution&display=swap');
 .image-fit{
     
             -webkit-background-size: cover;
@@ -8,4 +8,11 @@
                 width: 100%;
                 height: 100vh;
         
+}
+
+.description{
+    color:red ;
+    font-family: "Protest Revolution", sans-serif;
+        font-weight: 400;
+        font-style: normal;
 }
