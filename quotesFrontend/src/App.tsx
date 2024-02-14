@@ -36,12 +36,23 @@ function App() {
     <>
       <div className="page-container">
         <div className="logo">
-          {/* <img src={gun} alt='Click' className='logo-image'></img> */}
-          <p className="typo-style" onClick={getQuote}>
-            Because Hitory Is Written In Blood
-          </p>
-          <p style={{ display: loading ? "block" : "none" }} className="quote">{quote}</p>
-           <p style={{ display: loading ? "block" : "none" }} className="author">{ author}</p>
+          <div className="card" style={{ width: "18rem",borderRadius:"20px",backgroundColor:"rgba(255, 255, 255, 0.5)" }}>
+            <p className="typo-style" onClick={getQuote}>
+              Because Hitory Is Written In Blood
+            </p>
+            <p
+              style={{ display: loading ? "block" : "none",textAlign:"center" }}
+              className="quote"
+            >
+              {quote}
+            </p>
+            <p
+              style={{ display: loading ? "block" : "none",textAlign:"center" }}
+              className="author"
+            >
+              {author}
+            </p>
+          </div>
         </div>
         <MainBack />
       </div>
